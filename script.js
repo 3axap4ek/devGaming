@@ -4,38 +4,10 @@
 let slideIndex = 1;
 showSlides(slideIndex, "slider_mta");
 
-// /* Функция увеличивает индекс на 1, показывает следующй слайд*/
-// function plusSlide() {
-   
-// }
-
-// /* Функция уменьшяет индекс на 1, показывает предыдущий слайд*/
-// function minusSlide() {
-//    ;  
-// }
-
-/* Устанавливает текущий слайд */
-function currentSlide(n) {
-    showSlides(slideIndex = n, "slider_mta");
-}
-
-
 showSlides(slideIndex, "slider_devGaming");
 
-// /* Функция увеличивает индекс на 1, показывает следующй слайд*/
-// function plusSlide() {
-//     showSlides(slideIndex += 1, "slider_devGaming");
-// }
+showSlides(slideIndex, "slider_devGamingpl");
 
-// /* Функция уменьшяет индекс на 1, показывает предыдущий слайд*/
-// function minusSlide() {
-//     showSlides(slideIndex -= 1, "slider_devGaming");  
-// }
-
-/* Устанавливает текущий слайд */
-function currentSlide(n) {
-    showSlides(slideIndex = n, "slider_devGaming");
-}
 
 /* Основная функция слайдера */
 function showSlides(n, selectorName) {
@@ -67,26 +39,28 @@ slider.forEach((item)=>{
     if(e.target && e.target.textContent == "❮"){
       if(e.target.className == "prev mta"){
         showSlides (slideIndex += 1, "slider_mta");
-      }else{
-       
+      }else if(e.target.className == "prev devGamingpl"){
+        showSlides (slideIndex += 1, "slider_devGamingpl");
+      }
+      else{
         showSlides (slideIndex += 1, "slider_devGaming");
       }
      
     }
     if(e.target && e.target.textContent == "❯"){
-      if(e.target.className == "prev mta"){
+      if(e.target.className == "next mta"){
         showSlides (slideIndex -= 1, "slider_mta");
-      }else{
+      }else if(e.target.className == "next devGamingpl"){
+        showSlides (slideIndex -= 1, "slider_devGamingpl");
+      }
+      else{
        
         showSlides (slideIndex -= 1, "slider_devGaming");
       }
     }
 
-    
-   
-  
   });
 });
 
-next.addEventListener('click', ()=>  showSlides(slideIndex -= 1, "slider_mta"));
+
 
