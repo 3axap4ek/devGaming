@@ -4,13 +4,48 @@
     padding: 0;
 }
 
+html{
+    font-family: 'Roboto', sans-serif;
+   
+}
+
+main{
+    position: relative;
+}
+
+.up_block{
+    display: none;
+    z-index: 3;
+    height: 100vh;
+    width: 100px;
+   
+}
+.up_block:hover{
+    background-color:#1D1E33;
+}
+
+.up_btn{ 
+    display: block;
+    margin: 0 auto;
+    width: 50px;
+    margin-top: 40px;
+    z-index: 3;
+}
+
 header{ 
     background: url('/img/head.png') center center / cover no-repeat;
-    height: 350px;
+    height: 295px;
+    padding-top: 220px;
 }
 .container{
     width: 1140px;
     margin: 0 auto;
+    
+}
+
+nav{
+    background-color:#212121;
+    z-index: 2;
 }
 
 nav ul {
@@ -27,17 +62,26 @@ nav li{
     
 }
 
+
+
 h3{
     display: flex;
     justify-content: center;
     align-items: center;
     width: 300px;
-    height: 40px;
+    height: 35px;
+}
+
+
+
+.descr{
+    font-size: 16px;
+    font-weight: 100;
 }
 
 header h1{
     text-align: center;
-    margin-top: 230px;
+    
     color: whitesmoke;
 }
 
@@ -49,12 +93,12 @@ header h2{
 
 .main{
     background: #29273A;
-    padding: 50px 0 0 0;
+    padding: 20px 0 0 0;
 }
 
 article{
     color: white;
-    margin-bottom: 20px;
+    margin-bottom: 18px;
 }
 
 li:hover{
@@ -64,7 +108,7 @@ li:hover{
 
 h4{
     text-align: center;
-    font-size: 30px;
+    font-size: 22px;
     font-weight: bold;
     margin-bottom: 20px;
     color: white;
@@ -130,6 +174,7 @@ a:hover{
     height: 400px;
     margin-top: 20px;
     margin-bottom: 15px;
+    z-index: 1;
 }
 /* Картинка мастабируется по отношению к родительскому элементу */
 .slider .slider_mta, .slider_devGaming img {
