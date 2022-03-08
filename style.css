@@ -33,7 +33,7 @@ main{
 }
 
 header{ 
-    background: url('/img/head.png') center center / cover no-repeat;
+    background: url('img/head.png') center center / cover no-repeat;
     height: 295px;
     padding-top: 220px;
 }
